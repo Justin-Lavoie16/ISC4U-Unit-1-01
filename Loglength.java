@@ -27,7 +27,7 @@ final class CheckLogLength {
         final float length = Float.parseFloat(input.nextLine());
         final float maxLogsCarried = 1100 / (20 * length);
 
-        System.out.println("A truck can carry " 
+        System.out.println("A truck can carry "
             + maxLogsCarried + " " + length + " meter long logs.");
 
         input.close();
@@ -35,3 +35,5 @@ final class CheckLogLength {
         System.out.println("\nDone.");
     }
 }
+
+// Add a newline here to fix the NewlineAtEndOfFile error
