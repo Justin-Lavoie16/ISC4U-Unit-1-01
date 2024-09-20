@@ -10,21 +10,29 @@
 import java.util.Scanner;
 
 /*
- * This is the program.
+ * This program calculates how many logs a truck can carry
+ * based on the length of the logs and the truck's weight capacity.
  */
-final class checkLogLength {
-    private checkLogLength() {
-        throw new IllegalStateException("Cannot be instantiated");
+final class CheckLogLength {
+    
+    private CheckLogLength() {
+        // Prevent instantiation
     }
+
     public static void main(final String[] args) {
         final Scanner input = new Scanner(System.in);
+        
         System.out.print("Enter log length (m): ");
+        
+        final float length = Float.parseFloat(input.nextLine());
+        final float maxLogsCarried = 1100 / (20 * length);
 
-        static final float length = Float.parseFloat(input.nextLine());
-        static final float maxLogs = 1100 / (20 * length);
+        System.out.println("A truck can carry " 
+            + maxLogsCarried + " " + length + " meter long logs.");
 
-        System.out.println("truck can carry " + maxLogs+ " " + length + " meter long logs.");
-
+        input.close();
+        
         System.out.println("\nDone.");
     }
 }
+
