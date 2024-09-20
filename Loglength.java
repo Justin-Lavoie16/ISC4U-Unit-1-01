@@ -21,9 +21,9 @@ final class checkLogLength {
         System.out.print("Enter log length (m): ");
 
         static final float length = Float.parseFloat(input.nextLine());
-        static final float maxLogsCarried = 1100 / (20 * length);
+        static final float maxLogs = 1100 / (20 * length);
 
-        System.out.println("A truck can carry " + maxLogsCarried + " " + length + " meter long logs.");
+        System.out.println("truck can carry " + maxLogs+ " " + length + " meter long logs.");
 
         System.out.println("\nDone.");
     }
