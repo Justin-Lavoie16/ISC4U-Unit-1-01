@@ -14,16 +14,16 @@ import java.util.Scanner;
  * based on the length of the logs and the truck's weight capacity.
  */
 final class CheckLogLength {
-    
+
     private CheckLogLength() {
         // Prevent instantiation
     }
 
     public static void main(final String[] args) {
         final Scanner input = new Scanner(System.in);
-        
+
         System.out.print("Enter log length (m): ");
-        
+
         final float length = Float.parseFloat(input.nextLine());
         final float maxLogsCarried = 1100 / (20 * length);
 
@@ -31,8 +31,7 @@ final class CheckLogLength {
             + maxLogsCarried + " " + length + " meter long logs.");
 
         input.close();
-        
+
         System.out.println("\nDone.");
     }
 }
-
