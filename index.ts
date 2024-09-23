@@ -1,11 +1,10 @@
 /**
  * Finds how much logs a truck can carry if the max weight it can carry is 1100 kg and each log is 20 kg/m
  * 
- * By:      Justin Lavoie
+ * By: Justin Lavoie
  * Version: 1.0
- * Since:   2024-09-19
+ * Since: 2024-09-19
  */ 
-
 
 
 import { createPrompt } from 'bun-promptx'
