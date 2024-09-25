@@ -1,22 +1,22 @@
-/**
- * Finds how much logs a truck can carry if the max weight it can carry is 1100 kg and each log is 20 kg/m
- *
- * By:      Justin Lavoie
+/*
+ * much logs a truck can carry if the max weight it can carry is 1100 kg and each log is 20 kg/m
+ * 
+ * By: Justin Lavoie
  * Version: 1.0
- * Since:   2024-09-19
- */
+ * Since: 2024-09-19
+ */ 
+
 
 import { createPrompt } from 'bun-promptx'
 
-const length = await createPrompt('Enter log length (m): ')
+const maxweight = 1100
+const weightperlog = 20
 
-if (length.value !== null) {
-  const logLength = parseFloat(length.value)
-  const maxLogsCarried = 1100 / (20 * logLength)
+const numlogs = createPrompt('Choose the length of the logs that you would like to move with a truck (in meters)? (0.25, 0.5 ,1):  ')
 
-  console.log(`A truck can carry ${maxLogsCarried} ${logLength} meter long logs.`)
-} else {
-  console.log('Invalid log length provided.')
-}
+let logLength = parseFloat(numlogs.value)
+let logamount = maxweight / (weightperlog * logLength)
 
-console.log('\nDone.')
+console.log(`The truck can carry ${logamount} logs if they are ${logLength}m long.`)
+
+console.log('\nDone')
